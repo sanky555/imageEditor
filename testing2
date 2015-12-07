@@ -30,7 +30,7 @@
     $("#editor-window").imageEditor({
         'source': 'Assets/img/Adobe_Icon_256.png',
         "maxWidth": 500,
-         "remoteSave":'true',
+         "remoteSave":true,
         "remoteURL":'http://www.knowone.in/knowone/saveImage.php',
         "onClose": function () {
             console.log("Image not saved");
