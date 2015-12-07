@@ -1,0 +1,19 @@
+<?php
+if(isset($_REQUEST["image"]))
+{
+    include "DBPlugins/dbInterface.php";
+    $conn=connectToDB();
+    $conn->query("update ****** set *****='setup' where *****=2");
+    closeConnection($conn);
+    //echo "sanketh  setup";
+    $ar=array('message'=>'setup');
+    echo  json_encode($ar);
+}else{
+    include "DBPlugins/dbInterface.php";
+    $conn=connectToDB();
+    $conn->query("update ***** set *****='not setup' where *****=2");
+    closeConnection($conn);
+    $ar=array('message'=>'Not setup');
+    echo  json_encode($ar);
+}
+?>
